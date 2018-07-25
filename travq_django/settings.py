@@ -25,7 +25,7 @@ SECRET_KEY = '(+!%50k#m*+e7@0rgzgt&6x%54k%zzl@olr+x7jr+nf7-1ab(i'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['54.161.116.206']
 
 
 # Application definition
@@ -75,8 +75,8 @@ WSGI_APPLICATION = 'travq_django.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'djongo',
+        'NAME': 'travq',
     }
 }
 
@@ -118,3 +118,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, "static/")
