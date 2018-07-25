@@ -1,0 +1,3 @@
+#!/bin/bash
+systemctl start gunicorn
+systemctl enable gunicorn

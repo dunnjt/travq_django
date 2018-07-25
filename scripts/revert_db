@@ -1,0 +1,2 @@
+#!/bin/bash
+cp /home/ubuntu/temp/db.sqlite3 /home/ubuntu/travqserv/
