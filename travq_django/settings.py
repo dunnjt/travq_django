@@ -25,7 +25,7 @@ SECRET_KEY = '10q0@t=m+$_^1sx#sk%%sp+fnup9-rgyrf=8%*%yvk255&8670'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['54.161.116.206', '54.227.154.235']
 
 
 # Application definition
@@ -124,3 +124,5 @@ STATIC_URL = '/static/'
 GRAPHENE = {
     'SCHEMA': 'travq_django.schema.schema',
 }
+
+STATIC_ROOT = os.path.join(BASE_DIR, "static/")
