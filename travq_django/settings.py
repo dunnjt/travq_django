@@ -20,12 +20,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '(+!%50k#m*+e7@0rgzgt&6x%54k%zzl@olr+x7jr+nf7-1ab(i'
+SECRET_KEY = '10q0@t=m+$_^1sx#sk%%sp+fnup9-rgyrf=8%*%yvk255&8670'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['54.161.116.206']
+ALLOWED_HOSTS = ['54.161.116.206', '54.227.154.235']
 
 
 # Application definition
@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'graphene_django',
+    'users'
 ]
 
 MIDDLEWARE = [
@@ -76,7 +78,7 @@ WSGI_APPLICATION = 'travq_django.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'NAME': 'travq',
+        'NAME':'travq',
     }
 }
 
@@ -118,5 +120,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+GRAPHENE = {
+    'SCHEMA': 'travq_django.schema.schema',
+}
 
 STATIC_ROOT = os.path.join(BASE_DIR, "static/")
