@@ -25,7 +25,7 @@ SECRET_KEY = '10q0@t=m+$_^1sx#sk%%sp+fnup9-rgyrf=8%*%yvk255&8670'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['54.161.116.206', '54.227.154.235']
+ALLOWED_HOSTS = ['54.161.116.206', '54.227.154.235', 'localhost']
 
 
 # Application definition
@@ -77,8 +77,8 @@ WSGI_APPLICATION = 'travq_django.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'djongo',
-        'NAME':'travq',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
